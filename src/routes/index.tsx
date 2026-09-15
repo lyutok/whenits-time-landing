@@ -194,7 +194,6 @@ function Index() {
       <section className="night-section">
         <div className="moon" aria-hidden="true" />
         <div className="night-inner" data-reveal>
-          <img src={appIcon.url} loading="lazy" alt="WhenItsTime app icon" />
           <h2>Whenever you need to know,<br /><em>WhenItsTime.</em></h2>
           <p>Less guessing.<br />Less time-zone math.<br />Just the right time.</p>
           <AppStoreButton dark />
