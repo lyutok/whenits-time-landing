@@ -67,8 +67,8 @@ function isWorking(minutes: number, city: City) {
 
 function WhenItsTimeApp() {
   const [view, setView] = useState<View>("home");
-  const [homeCity, setHomeCity] = useState(CITIES[0]);
-  const [awayCity, setAwayCity] = useState(CITIES[1]);
+  const [homeCity, setHomeCity] = useState<City>(CITIES[0]!);
+  const [awayCity, setAwayCity] = useState<City>(CITIES[1]!);
   const [utcMinutes, setUtcMinutes] = useState(12 * 60 + 51);
   const [reminder, setReminder] = useState(false);
 
@@ -237,8 +237,8 @@ function FindView({ homeCity, awayCity, homeMinutes, awayMinutes, utcMinutes, bo
 function ExploreView({ homeCity, awayCity, onHomeChange, onAwayChange, utcMinutes }: { homeCity: City; awayCity: City; onHomeChange: (city: City) => void; onAwayChange: (city: City) => void; utcMinutes: number }) {
   return <div className="ios-explore-view">
     <section className="ios-city-selectors">
-      <label>My location<select value={homeCity.name} onChange={(e) => onHomeChange(CITIES.find((city) => city.name === e.target.value) ?? CITIES[0])}>{CITIES.map((city) => <option key={city.name}>{city.name}</option>)}</select><ChevronDown /></label>
-      <label>Compare with<select value={awayCity.name} onChange={(e) => onAwayChange(CITIES.find((city) => city.name === e.target.value) ?? CITIES[1])}>{CITIES.filter((city) => city.name !== homeCity.name).map((city) => <option key={city.name}>{city.name}</option>)}</select><ChevronDown /></label>
+      <label>My location<select value={homeCity.name} onChange={(e) => onHomeChange(CITIES.find((city) => city.name === e.target.value) ?? CITIES[0]!)}>{CITIES.map((city) => <option key={city.name}>{city.name}</option>)}</select><ChevronDown /></label>
+      <label>Compare with<select value={awayCity.name} onChange={(e) => onAwayChange(CITIES.find((city) => city.name === e.target.value) ?? CITIES[1]!)}>{CITIES.filter((city) => city.name !== homeCity.name).map((city) => <option key={city.name}>{city.name}</option>)}</select><ChevronDown /></label>
     </section>
     <section className="ios-city-list">
       {CITIES.map((city) => { const minutes = cityMinutes(utcMinutes, city); return <button type="button" key={city.name} onClick={() => city.name !== homeCity.name && onAwayChange(city)} className={city.name === awayCity.name ? "selected" : ""}>
