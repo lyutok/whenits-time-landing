@@ -183,6 +183,8 @@ footer .brand { justify-self: start; }
   .night-section { min-height: 900px; padding-left: 22px; padding-right: 22px; }
   .moon { width: 330px; top: 18%; }
   footer { grid-template-columns: 1fr auto; row-gap: 18px; text-align: right; }
+  footer .brand { justify-self: start; }
+  .footer-links { justify-self: end; }
   footer > span { grid-column: 1 / -1; text-align: center; }
 }
 
