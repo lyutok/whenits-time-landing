@@ -201,7 +201,10 @@ function Index() {
         </div>
         <footer>
           <a className="brand" href="#top"><img src={appIcon.url} alt="" /><span>WhenItsTime</span></a>
-          <a href="#privacy">Privacy</a>
+          <div className="footer-links">
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy</a>
+          </div>
           <span>Made for people in different places.</span>
         </footer>
       </section>
