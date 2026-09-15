@@ -9,7 +9,6 @@ import notifyScreen from "../assets/screen-notify-me.png";
 import remindersScreen from "../assets/screen-reminders.png";
 import workingHoursScreen from "../assets/screen-working-hours.png";
 import findTimeScreen from "../assets/screen-find-time.png";
-import transparentIcon from "../assets/icon-transparent.png";
 
 const APP_STORE_URL = "https://apps.apple.com/";
 
