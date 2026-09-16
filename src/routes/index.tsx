@@ -15,19 +15,57 @@ const APP_STORE_URL = "https://apps.apple.com/";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "WhenItsTime — Know When to Connect" },
+      { title: "WhenItsTime — Know When to Connect Across Time Zones" },
       {
         name: "description",
         content:
-          "See local time, working hours, and the best moments to connect with people anywhere.",
+          "WhenItsTime helps you find the right time to connect across time zones. Compare working hours, find the best time, and stay connected wherever you are.",
+      },
+      {
+        name: "keywords",
+        content:
+          "time, time zone, time zones, time zone app, time zone converter, time difference, world time, world clock, time in another city, time in another country, what time is it, what time is it in, time now, local time, current time, time zone planner, best time to call, best time to contact, working hours across time zones, remote work, international teams",
       },
       { property: "og:title", content: "WhenItsTime — Know When to Connect" },
       {
         property: "og:description",
-        content: "A beautiful little iOS app for finding the right moment across time zones.",
+        content: "Find the right time to reach out across time zones. Compare working hours, find the best time, and stay connected wherever you are.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+  //   { property: "og:image",
+  //   content:
+  //     "https://lyutok.github.io/whenitstime/images/preview.png",
+  // },
+
+  // {
+  //   property: "og:image:width",
+  //   content: "1200",
+  // },
+
+  // {
+  //   property: "og:image:height",
+  //   content: "630",
+  // },
+
+  // {
+  //   property: "og:image:alt",
+  //   content:
+  //     "WhenItsTime — Know when to connect across time zones",
+  // },
+
+  // {
+  //   property: "og:url",
+  //   content: "https://lyutok.github.io/whenitstime/",
+  // },
+
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
     ],
   }),
   component: Index,
