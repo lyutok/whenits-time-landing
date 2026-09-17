@@ -172,7 +172,7 @@ footer { position: absolute; bottom: 28px; left: 5vw; right: 5vw; font-size: 12p
   .horizon-ring { width: 480px; }
   .feature-explore { padding-left: 0; }
   .feature-explore .section-copy { padding-left: 24px; }
-  .explore-stage { height: 620px; overflow: hidden; }
+  .explore-stage { height: auto; min-height: 420px; overflow: visible; }
   .explore-stage .phone-wrap { width: min(82vw, 330px); transform: rotate(-2deg) translateX(50px); }
   .hours-stage .phone-wrap { width: min(78vw, 300px); }
   .reminder-section { min-height: 1050px; }
