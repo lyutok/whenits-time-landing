@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, Check, ChevronRight } from "lucide-react";
-import { useEffect } from "react";
+import { ArrowDown, Check, ChevronRight, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import appIcon from "../assets/app-icon.png";
 import exploreScreen from "../assets/screen-explore.png";
@@ -95,6 +95,8 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
 }
 
 function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver(
@@ -117,6 +119,24 @@ function Index() {
           <a href="#pro">Pro</a>
           <Link className="nav-cta" to="/app">Try the app</Link>
         </div>
+
+        <button
+          type="button"
+          className="mobile-menu-toggle"
+          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        {mobileMenuOpen && (
+          <div className="mobile-menu" aria-label="Mobile navigation">
+            <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
+            <a href="#pro" onClick={() => setMobileMenuOpen(false)}>Pro</a>
+            <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try the app</Link>
+          </div>
+        )}
       </nav>
 
       <section className="hero" id="top">
