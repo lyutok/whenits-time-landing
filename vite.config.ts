@@ -6,13 +6,14 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [
-  tanstackStart({
-    start: { entry: "start" },
-  }),
-  react(),
-  tailwindcss(),
-  cloudflare(),
+    tanstackStart({
+      start: { entry: "start" },
+    }),
+    react(),
+    tailwindcss(),
+    cloudflare(),
   ],
+
   resolve: {
     tsconfigPaths: true,
   },
