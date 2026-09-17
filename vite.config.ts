@@ -1,4 +1,3 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react from "@vitejs/plugin-react";
@@ -8,10 +7,12 @@ export default defineConfig({
   plugins: [
     tanstackStart({
       start: { entry: "start" },
+      prerender: {
+        enabled: true,
+      },
     }),
     react(),
     tailwindcss(),
-    cloudflare(),
   ],
 
   resolve: {
