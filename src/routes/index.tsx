@@ -14,6 +14,20 @@ const APP_STORE_URL = "https://apps.apple.com/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-T4R1CPRER4",
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T4R1CPRER4');
+        `,
+      },
+    ],
     meta: [
       { title: "WhenItsTime — Know When to Connect Across Time Zones" },
       {

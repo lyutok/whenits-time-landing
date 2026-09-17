@@ -146,7 +146,7 @@ footer { position: absolute; bottom: 28px; left: 5vw; right: 5vw; font-size: 12p
   h1 { font-size: clamp(64px, 20vw, 88px); margin-top: 25px; }
   .hero-detail { font-size: 15px; max-width: 340px; }
   .hero-actions { flex-wrap: wrap; }
-  .hero-phone { width: 275px; align-self: flex-end; margin-top: 58px; margin-right: -52px; transform: rotate(3deg); }
+  .hero-phone { width: min(72vw, 300px); align-self: center; margin-top: 58px; margin-right: 0; transform: rotate(3deg); }
   .sun-disc { width: 580px; top: 355px; right: -280px; }
   .scroll-cue { display: none; }
   .phone-wrap { border-radius: 34px; }
@@ -164,18 +164,18 @@ footer { position: absolute; bottom: 28px; left: 5vw; right: 5vw; font-size: 12p
   .feature .section-copy { align-self: end; }
   .feature-overlap .phone-stage, .feature-hours .phone-stage { order: 2; }
   .phone-stage { height: 650px; }
-  .phone-stage .phone-wrap { width: 290px; }
+  .phone-stage .phone-wrap { width: min(80vw, 290px); }
   .horizon-ring { width: 480px; }
   .feature-explore { padding-left: 0; }
   .feature-explore .section-copy { padding-left: 24px; }
   .explore-stage { height: 620px; overflow: hidden; }
-  .explore-stage .phone-wrap { width: 330px; transform: rotate(-2deg) translateX(-55px); }
-  .hours-stage .phone-wrap { width: 300px; }
+  .explore-stage .phone-wrap { width: min(82vw, 330px); transform: rotate(-2deg) translateX(-18px); }
+  .hours-stage .phone-wrap { width: min(78vw, 300px); }
   .reminder-section { min-height: 1050px; }
   .reminder-screens { height: 600px; margin-top: 50px; }
-  .reminder-screens .phone-wrap { width: 250px; }
-  .phone-back { left: -24px; top: 110px; }
-  .phone-front { right: -28px; }
+  .reminder-screens .phone-wrap { width: min(62vw, 250px); }
+  .phone-back { left: 0; top: 110px; }
+  .phone-front { right: 0; }
   .human-section { min-height: 850px; padding-left: 22px; padding-right: 22px; }
   .human-inner h2, .night-inner h2 { font-size: clamp(44px, 13vw, 62px); }
   .human-inner p { font-size: 13px; }
@@ -193,6 +193,21 @@ footer { position: absolute; bottom: 28px; left: 5vw; right: 5vw; font-size: 12p
   .foot-top { gap: 24px; flex-wrap: wrap; }
   .foot-cols { gap: 16px 24px; }
   .foot-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 118px; padding-bottom: 54px; }
+  .hero-phone { width: min(64vw, 240px); margin-top: 36px; }
+  .phone-stage { height: 520px; }
+  .phone-stage .phone-wrap { width: min(68vw, 250px); }
+  .explore-stage .phone-wrap { width: min(74vw, 260px); transform: rotate(-2deg) translateX(-10px); }
+  .hours-stage .phone-wrap { width: min(70vw, 245px); }
+  .reminder-screens { height: 440px; }
+  .reminder-screens .phone-wrap { width: min(58vw, 200px); }
+  .phone-back { left: 8px; top: 80px; }
+  .phone-front { right: 8px; }
+  .time-label { gap: 12px; }
+  .time-label span { white-space: nowrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
