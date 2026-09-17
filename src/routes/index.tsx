@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       },
     { property: "og:image",
     content:
-      "https://raw.githubusercontent.com/lyutok/whenits-time-landing/refs/heads/main/src/assets/og-image-preview.jpg",
+      "https://raw.githubusercontent.com/lyutok/whenits-time-landing/refs/heads/main/src/assets/og-image-preview.png",
   },
 
   {
