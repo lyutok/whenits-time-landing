@@ -117,7 +117,9 @@ function Index() {
         <div className="nav-links">
           <a href="#features">Features</a>
           <a href="#pro">Pro</a>
-          <Link className="nav-cta" to="/app">Try the app</Link>
+          {/* link to web demo */}
+          {/* <Link className="nav-cta" to="/app">Try the app</Link> */}
+          <a className="nav-cta" href={APP_STORE_URL} target="_blank" rel="noreferrer">Try the app</a>
         </div>
 
         <button
