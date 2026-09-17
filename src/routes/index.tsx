@@ -136,7 +136,8 @@ function Index() {
           <div className="mobile-menu" aria-label="Mobile navigation">
             <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
             <a href="#pro" onClick={() => setMobileMenuOpen(false)}>Pro</a>
-            <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try the app</Link>
+            {/* <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try the app</Link> */}
+            <a href={APP_STORE_URL} target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)}>Try the app</a>
           </div>
         )}
       </nav>
