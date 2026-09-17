@@ -31,26 +31,26 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Find the right time to reach out across time zones. Compare working hours, find the best time, and stay connected wherever you are.",
       },
-  //   { property: "og:image",
-  //   content:
-  //     "https://lyutok.github.io/whenitstime/images/preview.png",
-  // },
+    { property: "og:image",
+    content:
+      "https://raw.githubusercontent.com/lyutok/whenits-time-landing/refs/heads/main/src/assets/og-image-preview.jpg",
+  },
 
-  // {
-  //   property: "og:image:width",
-  //   content: "1200",
-  // },
+  {
+    property: "og:image:width",
+    content: "1200",
+  },
 
-  // {
-  //   property: "og:image:height",
-  //   content: "630",
-  // },
+  {
+    property: "og:image:height",
+    content: "630",
+  },
 
-  // {
-  //   property: "og:image:alt",
-  //   content:
-  //     "WhenItsTime — Know when to connect across time zones",
-  // },
+  {
+    property: "og:image:alt",
+    content:
+      "WhenItsTime — Know when to connect across time zones",
+  },
 
   // {
   //   property: "og:url",
@@ -120,7 +120,7 @@ function Index() {
         <div className="hero-phone phone-wrap" data-reveal>
           <img src={overlapScreen} alt="WhenItsTime showing the overlap between Paris and New York" />
         </div>
-        <a className="scroll-cue" href="#features" aria-label="Continue to features"><ArrowDown size={18} /></a>
+        <a className="scroll-cue" href="#pro" aria-label="Continue to price"><ArrowDown size={18} /></a>
       </section>
 
       <section className="two-places" id="features">
