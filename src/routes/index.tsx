@@ -87,7 +87,14 @@ export const Route = createFileRoute("/")({
 
 function AppStoreButton({ dark = false }: { dark?: boolean }) {
   return (
-    <a className={dark ? "store-button store-button-light" : "store-button"} href={APP_STORE_URL}>
+    <a
+      className={dark ? "store-button store-button-light" : "store-button"}
+      href={APP_STORE_URL}
+      onClick={() => {
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        gtag?.("event", "app_store_click", { button_variant: dark ? "footer" : "hero" });
+      }}
+    >
       <span className="apple-mark" aria-hidden="true">●</span>
       <span><small>Download on the</small>App Store</span>
     </a>
