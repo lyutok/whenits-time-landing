@@ -94,7 +94,10 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
       rel={dark ? "noreferrer" : undefined}
       onClick={() => {
         const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
-        gtag?.("event", "app_store_click", { button_variant: dark ? "footer" : "hero" });
+        gtag?.("event", "app_store_click", {
+          button_variant: dark ? "footer" : "hero",
+          debug_mode: true,
+        });
       }}
     >
       <span className="apple-mark" aria-hidden="true">●</span>
