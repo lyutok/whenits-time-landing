@@ -90,8 +90,8 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
     <a
       className={dark ? "store-button store-button-light" : "store-button"}
       href={APP_STORE_URL}
-      target={dark ? "_blank" : undefined}
-      rel={dark ? "noreferrer" : undefined}
+      target="_blank"
+      rel="noreferrer"
       onClick={() => {
         const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
         gtag?.("event", "app_store_click", {
