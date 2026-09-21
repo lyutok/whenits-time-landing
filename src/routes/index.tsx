@@ -258,6 +258,7 @@ function Index() {
           <div><span>Yearly</span><strong>$19.99</strong><small>/ year</small></div>
           <div><span>Lifetime</span><strong>$39.99</strong><small>once</small></div>
         </div>
+        <p className="pricing-note">*Local prices may vary by country or region.</p>
         <div className="compare" data-reveal>
           <div>
             <h3>Free</h3>
