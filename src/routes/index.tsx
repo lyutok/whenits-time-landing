@@ -157,7 +157,7 @@ function Index() {
       <section className="hero" id="top">
         <div className="sun-disc" aria-hidden="true" />
         <div className="hero-copy" data-reveal>
-          <p className="time-label">Berlin · 14:51 <span>New York · 08:51</span></p>
+          <p className="time-label">Berlin · 15:49 <span>New York · 09:49</span></p>
           <h1>Is now a<br />good time?</h1>
           <p className="hero-answer">WhenItsTime helps you find out.</p>
           <p className="hero-detail">See local time, working hours, and the best moments to connect — wherever you are.</p>
