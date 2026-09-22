@@ -66,10 +66,10 @@ export const Route = createFileRoute("/")({
       "WhenItsTime — Know when to connect across time zones",
   },
 
-  // {
-  //   property: "og:url",
-  //   content: "https://lyutok.github.io/whenitstime/",
-  // },
+  {
+    property: "og:url",
+    content: "https://whenitstime.pages.dev/",
+  },
 
     {
       property: "og:type",
@@ -301,7 +301,7 @@ function Index() {
               <div className="foot-cols">
                 <a href="#features">Features</a>
                 <a href="#pro">Pricing</a>
-                <a href="#privacy">Privacy Policy</a>
+                <Link to="/privacy">Privacy Policy</Link>
                 <a href="#contact">Contact Us</a>
               </div>
             </div>
