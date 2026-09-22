@@ -157,7 +157,7 @@ function Index() {
       <section className="hero" id="top">
         <div className="sun-disc" aria-hidden="true" />
         <div className="hero-copy" data-reveal>
-          <p className="time-label">Paris · 14:51 <span>New York · 08:51</span></p>
+          <p className="time-label">Berlin · 14:51 <span>New York · 08:51</span></p>
           <h1>Is now a<br />good time?</h1>
           <p className="hero-answer">WhenItsTime helps you find out.</p>
           <p className="hero-detail">See local time, working hours, and the best moments to connect — wherever you are.</p>
@@ -167,7 +167,7 @@ function Index() {
           </div>
         </div>
         <div className="hero-phone phone-wrap" data-reveal>
-          <img src={overlapScreen} alt="WhenItsTime showing the overlap between Paris and New York" />
+          <img src={overlapScreen} alt="WhenItsTime showing the overlap between Berlin and New York" />
         </div>
         <a className="scroll-cue" href="#pro" aria-label="Continue to price"><ArrowDown size={18} /></a>
       </section>
@@ -178,8 +178,8 @@ function Index() {
           <h2>Your afternoon might be their evening.</h2>
           <p>Time zones tell you what time it is.<br />WhenItsTime helps you understand what that means.</p>
         </div>
-        <div className="time-orbits" data-reveal aria-label="Paris at 3:20 PM and Tokyo at 11:20 PM">
-          <div className="orbit orbit-day"><span className="orbit-kicker">Paris</span><strong>15:20</strong><small>afternoon</small></div>
+        <div className="time-orbits" data-reveal aria-label="Berlin at 3:20 PM and Tokyo at 11:20 PM">
+          <div className="orbit orbit-day"><span className="orbit-kicker">Berlin</span><strong>15:20</strong><small>afternoon</small></div>
           <div className="orbit-line"><span>+8 hours</span></div>
           <div className="orbit orbit-night"><span className="orbit-kicker">Tokyo</span><strong>23:20</strong><small>night</small></div>
         </div>
@@ -199,24 +199,24 @@ function Index() {
 
       <section className="feature feature-explore">
         <div className="phone-stage explore-stage" data-reveal>
-          <div className="phone-wrap"><img loading="lazy" src={exploreScreen} alt="Explore view with New York, Paris, and Chiang Mai" /></div>
+          <div className="phone-wrap"><img loading="lazy" src={workingHoursScreen} alt="Working hours settings" /></div>
         </div>
         <div className="section-copy" data-reveal>
-          <p className="eyebrow">Follow the day</p>
-          <h2>See how their<br />day is going.</h2>
-          <p>Keep the places that matter to you in view and see their local time and working hours at a glance.</p>
+          <p className="eyebrow">When they’re available</p>
+          <h2>Know when they’re<br />actually available.</h2>
+          <p>Set working hours for each location and instantly see whether now is a good time — or when the next good window begins.</p>
         </div>
       </section>
 
       <section className="feature feature-hours">
         <div className="afternoon-sun" aria-hidden="true" />
         <div className="section-copy" data-reveal>
-          <p className="eyebrow">When they’re available</p>
-          <h2>Know when they’re<br />actually available.</h2>
-          <p>Set working hours for each location and instantly see whether now is a good time — or when the next good window begins.</p>
+          <p className="eyebrow">Keep your world in view</p>
+          <h2>See local time and <br />working hours at a glance.</h2>
+          <p>Keep the places that matter to you close and see where they are in their day.</p>
         </div>
         <div className="phone-stage hours-stage" data-reveal>
-          <div className="phone-wrap"><img loading="lazy" src={workingHoursScreen} alt="Working hours settings in WhenItsTime" /></div>
+          <div className="phone-wrap"><img loading="lazy" src={exploreScreen} alt="Explore view" /></div>
         </div>
       </section>
 
