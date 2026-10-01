@@ -203,8 +203,8 @@ function Index() {
         </div>
         <div className="section-copy" data-reveal>
           <p className="eyebrow">When they’re available</p>
-          <h2>Know when they’re<br />actually available.</h2>
-          <p>Set working hours for each location and instantly see whether now is a good time — or when the next good window begins.</p>
+          <h2>Know when your work hours<br />line up.</h2>
+          <p>Set your work hours once for your work location and instantly see when they fall in your current location.</p>
         </div>
       </section>
 
