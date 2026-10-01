@@ -28,7 +28,7 @@ function PrivacyPolicy() {
 
       <article className="policy-content">
         <p className="eyebrow">Privacy</p>
-        <h1>Privacy Policy for When It&apos;s Time</h1>
+        <h1>Privacy Policy for WhenItsTime</h1>
         <p className="policy-updated"><strong>Last updated:</strong> September 22, 2026</p>
         <p>When It&apos;s Time (&ldquo;the App&rdquo;) is a time zone and working-hours app.</p>
         <p>This Privacy Policy explains what information When It&apos;s Time uses, how that information is handled, and what choices you have.</p>
