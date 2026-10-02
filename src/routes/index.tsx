@@ -291,7 +291,7 @@ function Index() {
           <p>The right time, wherever they are.</p>
           <AppStoreButton dark />
         </div>
-        <footer>
+        <footer id="contact">
           <div className="foot-wrap">
             <div className="foot-top">
               <a className="brand" href="#top">
