@@ -302,7 +302,11 @@ function Index() {
                 <a href="#features">Features</a>
                 <a href="#pro">Pricing</a>
                 <Link to="/privacy">Privacy Policy</Link>
-                <a href="mailto:helloapps.studio@outlook.com?subject=WhenItsTime%20inquiry">
+                <a
+                  href="https://outlook.live.com/mail/0/deeplink/compose?to=helloapps.studio%40outlook.com&subject=WhenItsTime%20inquiry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact Us
                 </a>
               </div>
