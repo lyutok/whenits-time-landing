@@ -112,7 +112,16 @@ function PrivacyPolicy() {
 
         <h2>11. Contact</h2>
         <p>If you have questions about this Privacy Policy or When It&apos;s Time&apos;s privacy practices, you can contact:</p>
-        <p><strong>Email:</strong> [YOUR PRIVACY EMAIL]</p>
+        <p>
+          <strong>Email:</strong>{" "}
+          <a
+            href="https://outlook.live.com/mail/0/deeplink/compose?to=helloapps.studio%40outlook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            helloapps.studio@outlook.com
+          </a>
+        </p>
       </article>
     </main>
   );
