@@ -10,7 +10,7 @@ import remindersScreen from "../assets/screen-reminders.png";
 import workingHoursScreen from "../assets/screen-working-hours.png";
 import findTimeScreen from "../assets/screen-find-time.png";
 
-const APP_STORE_URL = "https://apps.apple.com/";
+const APP_STORE_URL = "https://apps.apple.com/us/app/whenitstime/id6793032524";
 
 export const Route = createFileRoute("/")({
   head: () => ({
