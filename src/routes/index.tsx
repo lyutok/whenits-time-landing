@@ -216,6 +216,7 @@ function Index() {
         <div className="nav-links">
           <a href="#features">Features</a>
           <a href="#pro">Pro</a>
+          <a href="#faq">FAQ</a>
           {/* link to web demo */}
           {/* <Link className="nav-cta" to="/app">Try the app</Link> */}
           <a className="nav-cta" href={APP_STORE_URL} target="_blank" rel="noreferrer">Try the app</a>
@@ -233,8 +234,15 @@ function Index() {
 
         {mobileMenuOpen && (
           <div className="mobile-menu" aria-label="Mobile navigation">
-            <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
-            <a href="#pro" onClick={() => setMobileMenuOpen(false)}>Pro</a>
+            <a href="#features" onClick={() => setMobileMenuOpen(false)}>
+              Features
+            </a>
+            <a href="#pro" onClick={() => setMobileMenuOpen(false)}>
+              Pro
+            </a>
+            <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
+              FAQ
+            </a>
             {/* <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try the app</Link> */}
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)}>Try the app</a>
           </div>
@@ -346,39 +354,92 @@ function Index() {
         </div>
       </section>
 
-      <section className="pro-section" id="pro">
-        <div className="pro-intro" data-reveal>
-          <p className="eyebrow">WhenItsTime Pro</p>
-          <h2>Start free.<br />Go further when<br />you need to.</h2>
-          <p>Start with what you need. Go further when you need more.</p>
-        </div>
-        <div className="pricing" data-reveal>
-          <div><span>Monthly</span><strong>$2.99</strong><small>/ month</small></div>
-          <div><span>Yearly</span><strong>$19.99</strong><small>/ year</small></div>
-          <div><span>Lifetime</span><strong>$39.99</strong><small>once</small></div>
-        </div>
-        <p className="pricing-note">*Local prices may vary by country or region.</p>
-        <div className="compare" data-reveal>
-          <div>
-            <h3>Free</h3>
-            <ul>{["2 main locations", "Switch locations", "Working Hours", "Find Time", "Best Overlap", "Explore up to 3 cities", "One-time reminders", "Repeating reminders", "Up to 3 active reminders"].map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
+      <div className="evening-arc">
+        <section className="pro-section" id="pro">
+          <div className="pro-intro" data-reveal>
+            <p className="eyebrow">WhenItsTime Pro</p>
+            <h2>Start free.<br />Go further when<br />you need to.</h2>
+            <p>Start with what you need. Go further when you need more.</p>
           </div>
-          <div>
-            <h3>Pro</h3>
-            <p>Everything in Free, plus:</p>
-            <ul><li><Check size={15} />Unlimited cities in Explore</li><li><Check size={15} />Unlimited active reminders</li></ul>
+          <div className="pricing" data-reveal>
+            <div><span>Monthly</span><strong>$2.99</strong><small>/ month</small></div>
+            <div><span>Yearly</span><strong>$19.99</strong><small>/ year</small></div>
+            <div><span>Lifetime</span><strong>$39.99</strong><small>once</small></div>
           </div>
-        </div>
-      </section>
+          <p className="pricing-note">*Local prices may vary by country or region.</p>
+          <div className="compare" data-reveal>
+            <div>
+              <h3>Free</h3>
+              <ul>{["2 main locations", "Switch locations", "Working Hours", "Find Time", "Best Overlap", "Explore up to 3 cities", "One-time reminders", "Repeating reminders", "Up to 3 active reminders"].map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
+            </div>
+            <div>
+              <h3>Pro</h3>
+              <p>Everything in Free, plus:</p>
+              <ul><li><Check size={15} />Unlimited cities in Explore</li><li><Check size={15} />Unlimited active reminders</li></ul>
+            </div>
+          </div>
+        </section>
 
-      <section className="night-section">
-        <div className="moon" aria-hidden="true" />
-        <div className="night-inner" data-reveal>
-          <h2>Know when to connect.<br />Open<br /><em>WhenItsTime.</em></h2>
-          <p>The right time, wherever they are.</p>
-          <AppStoreButton dark />
-        </div>
-        <footer id="contact">
+        <section className="faq-section" id="faq">
+          <div className="faq-inner">
+            <div className="faq-heading">
+              <p className="eyebrow">A few helpful answers</p>
+              <h2>
+                Time zone questions,
+                <br />
+                answered.
+              </h2>
+            </div>
+            <div className="faq-list">
+              <details>
+              <summary>How do I find the best time to call someone in another time zone?</summary>
+              <p>
+                Compare the working hours of both places and look for the overlap. WhenItsTime does
+                this for you: set your work hours once, pick two locations and see the windows when
+                both of you are available.
+              </p>
+              </details>
+              <details>
+              <summary>What is working-hours overlap across time zones?</summary>
+              <p>
+                It is the part of the day when it is working time in both locations at once. For
+                example, 9:00–17:00 in Berlin only overlaps with 9:00–17:00 in New York for a couple
+                of hours.
+              </p>
+              </details>
+              <details>
+              <summary>Is WhenItsTime free?</summary>
+              <p>
+                Yes, you can start for free with 2 main locations, Working Hours, Find Time, Best
+                Overlap and up to 3 cities in Explore. WhenItsTime Pro adds unlimited cities and
+                reminders: $2.99 per month, $19.99 per year or $39.99 once. Local prices may vary.
+              </p>
+              </details>
+              <details>
+              <summary>Can I set a reminder for a time in another time zone?</summary>
+              <p>
+                Yes. Set a one-time or repeating reminder for the moment that matters and
+                WhenItsTime handles the time-zone math.
+              </p>
+              </details>
+              <details>
+              <summary>Where can I download WhenItsTime?</summary>
+              <p>
+                WhenItsTime is an iOS app available on the <a href={APP_STORE_URL}>App Store</a>.
+              </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section className="night-section">
+          <div className="moon" aria-hidden="true" />
+          <div className="night-inner" data-reveal>
+            <h2>Know when to connect.<br />Open<br /><em>WhenItsTime.</em></h2>
+            <p>The right time, wherever they are.</p>
+            <AppStoreButton dark />
+          </div>
+          <footer id="contact">
           <div className="foot-wrap">
             <div className="foot-top">
               <a className="brand" href="#top">
@@ -388,6 +449,7 @@ function Index() {
               <div className="foot-cols">
                 <a href="#features">Features</a>
                 <a href="#pro">Pricing</a>
+                <a href="#faq">FAQ</a>
                 <Link to="/privacy">Privacy Policy</Link>
                 <a href="mailto:helloapps.studio%40outlook.com?subject=WhenItsTime%20inquiry" target="_blank">
                 {/* <a
@@ -404,8 +466,9 @@ function Index() {
               <span>Know when to connect.</span>
             </div>
           </div>
-        </footer>
-      </section>
+          </footer>
+        </section>
+      </div>
     </main>
   );
 }

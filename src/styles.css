@@ -106,7 +106,8 @@ h2 em { font-style: normal; color: oklch(0.88 0.08 195); }
 .for-list { margin-top: 44px; }
 .for-row { padding: 34px 0; border-top: 1px solid oklch(0.95 0.02 220 / .16); }
 .for-row span { font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); line-height: 1.15; color: var(--glass); }
-.pro-section { padding: 160px max(7vw, calc((100vw - 1260px)/2)); background: linear-gradient(var(--dusk), oklch(0.3 0.075 250)); color: oklch(0.96 0.015 220); }
+.evening-arc { background: linear-gradient(180deg, var(--dusk) 0%, oklch(0.3 0.075 250) 30%, var(--night) 70%, var(--night-deep) 100%); color: oklch(0.96 0.015 220); }
+.pro-section { padding: 160px max(7vw, calc((100vw - 1260px)/2)); background: transparent; }
 .pro-intro { max-width: 800px; }
 .pro-intro > p:last-child { color: oklch(0.88 0.025 226); }
 .pricing { margin-top: 90px; border-top: 1px solid oklch(0.95 0.02 220 / .18); border-bottom: 1px solid oklch(0.95 0.02 220 / .18); display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -121,7 +122,19 @@ h2 em { font-style: normal; color: oklch(0.88 0.08 195); }
 .compare p { opacity: .6; }
 .compare ul { list-style: none; padding: 0; columns: 2; }
 .compare li { display: flex; gap: 9px; align-items: center; margin: 0 0 13px; break-inside: avoid; font-size: 14px; opacity: .78; }
-.night-section { min-height: 1050px; display: flex; flex-direction: column; position: relative; align-items: center; justify-content: center; text-align: center; padding: 150px 6vw 34px; background: radial-gradient(circle at 50% 24%, oklch(0.32 0.085 250), transparent 34%), linear-gradient(var(--night), var(--night-deep)); color: oklch(0.96 0.012 228); }
+.faq-section { padding: clamp(90px, 10vw, 130px) 24px; background: transparent; color: oklch(0.96 0.012 228); }
+.faq-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(40px, 8vw, 120px); align-items: start; }
+.faq-heading h2 { max-width: 480px; font-size: clamp(44px, 5.4vw, 76px); line-height: 1.02; }
+.faq-list { border-top: 1px solid oklch(0.95 0.02 220 / .18); }
+.faq-list details { border-bottom: 1px solid oklch(0.95 0.02 220 / .18); padding: 22px 0; }
+.faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-family: var(--font-display); font-size: 19px; font-weight: 650; line-height: 1.45; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; flex: 0 0 auto; color: oklch(0.82 0.07 205); font-family: var(--font-sans); font-size: 24px; font-weight: 400; opacity: .8; }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list summary:focus-visible { outline: 2px solid oklch(0.82 0.07 205); outline-offset: 6px; border-radius: 2px; }
+.faq-list details p { max-width: 680px; margin: 14px 30px 0 0; color: oklch(0.82 0.025 226); font-size: 15px; line-height: 1.7; }
+.faq-list details p a { color: oklch(0.86 0.07 200); text-decoration: underline; text-underline-offset: 3px; }
+.night-section { min-height: 1050px; display: flex; flex-direction: column; position: relative; align-items: center; justify-content: center; text-align: center; padding: 150px 6vw 34px; background: radial-gradient(circle at 50% 24%, oklch(0.32 0.085 250), transparent 34%); color: oklch(0.96 0.012 228); }
 .moon { position: absolute; top: 13%; width: 420px; aspect-ratio: 1; border-radius: 50%; background: oklch(0.82 0.05 220 / .07); box-shadow: 0 0 90px oklch(0.75 0.08 215 / .08); }
 .night-inner { position: relative; z-index: 2; }
 .night-inner h2 { font-size: clamp(56px, 7vw, 105px); }
@@ -207,6 +220,9 @@ footer { position: absolute; bottom: 28px; left: 5vw; right: 5vw; font-size: 12p
   .pricing > div:last-child { border-bottom: 0; }
   .compare { grid-template-columns: 1fr; gap: 44px; }
   .compare ul { columns: 1; }
+  .faq-inner { grid-template-columns: 1fr; gap: 42px; }
+  .faq-heading h2 { font-size: clamp(44px, 13vw, 68px); }
+  .faq-list summary { font-size: 17px; }
   .night-section { min-height: 900px; padding-left: 22px; padding-right: 22px; }
   .moon { width: 330px; top: 18%; }
   footer { bottom: 22px; left: 22px; right: 22px; }
