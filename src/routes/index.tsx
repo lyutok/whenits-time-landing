@@ -11,9 +11,80 @@ import workingHoursScreen from "../assets/screen-working-hours.png";
 import findTimeScreen from "../assets/screen-find-time.png";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/whenitstime/id6793032524";
+const OG_IMAGE_URL = "https://whenitstime.pages.dev/og-image.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    title: "WhenItsTime — Time Zone Overlap & Best Time to Call (iPhone App)",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Find the best time to call or meet across time zones. WhenItsTime shows local times, working-hours overlap and sets reminders. Free iPhone app.",
+      },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large",
+      },
+      {
+        name: "apple-itunes-app",
+        content: "app-id=6793032524",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:site_name",
+        content: "WhenItsTime",
+      },
+      {
+        property: "og:url",
+        content: "https://whenitstime.pages.dev/",
+      },
+      {
+        property: "og:title",
+        content: "WhenItsTime — Know When to Connect Across Time Zones",
+      },
+      {
+        property: "og:description",
+        content:
+          "Find the best time to call or meet across time zones. Compare working hours, see the overlap, set reminders.",
+      },
+      {
+        property: "og:image",
+        content: OG_IMAGE_URL,
+      },
+      {
+        property: "og:image:width",
+        content: "1451",
+      },
+      {
+        property: "og:image:height",
+        content: "1084",
+      },
+      {
+        property: "og:image:alt",
+        content: "WhenItsTime — Know when to connect across time zones",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "WhenItsTime — Know When to Connect Across Time Zones",
+      },
+      {
+        name: "twitter:description",
+        content: "Find the best time to call or meet across time zones. Free iPhone app.",
+      },
+      {
+        name: "twitter:image",
+        content: OG_IMAGE_URL,
+      },
+    ],
+    links: [{ rel: "canonical", href: "https://whenitstime.pages.dev/" }],
     scripts: [
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-T4R1CPRER4",
@@ -27,59 +98,75 @@ export const Route = createFileRoute("/")({
           gtag('config', 'G-T4R1CPRER4');
         `,
       },
-    ],
-    meta: [
-      { title: "WhenItsTime — Know When to Connect Across Time Zones" },
       {
-        name: "description",
-        content:
-          "WhenItsTime helps you find the right time to connect across time zones. Compare working hours, find the best time, and stay connected wherever you are.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "WhenItsTime",
+          applicationCategory: "UtilitiesApplication",
+          operatingSystem: "iOS",
+          description:
+            "WhenItsTime helps you find the right time to connect across time zones: local times, working-hours overlap, best time to call and reminders.",
+          url: "https://whenitstime.pages.dev/",
+          downloadUrl: "https://apps.apple.com/us/app/whenitstime/id6793032524",
+          image: OG_IMAGE_URL,
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        }),
       },
       {
-        name: "keywords",
-        content:
-          "time, time zone, time zones, time zone app, time zone converter, time difference, world time, world clock, time in another city, time in another country, what time is it, what time is it in, time now, local time, current time, time zone planner, best time to call, best time to contact, working hours across time zones, remote work, international teams",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "How do I find the best time to call someone in another time zone?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Compare the working hours of both places and look for the overlap. WhenItsTime does this for you: set your work hours once, pick two locations and see the windows when both of you are available.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What is working-hours overlap across time zones?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "It is the part of the day when it is working time in both locations at once. For example, 9:00–17:00 in Berlin only overlaps with 9:00–17:00 in New York for a couple of hours.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Is WhenItsTime free?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, you can start for free with 2 main locations, Working Hours, Find Time, Best Overlap and up to 3 cities in Explore. WhenItsTime Pro adds unlimited cities and reminders: $2.99 per month, $19.99 per year or $39.99 once. Local prices may vary.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Can I set a reminder for a time in another time zone?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Set a one-time or repeating reminder for the moment that matters and WhenItsTime handles the time-zone math.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Where can I download WhenItsTime?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "WhenItsTime is an iOS app available on the App Store.",
+              },
+            },
+          ],
+        }),
       },
-      { property: "og:title", content: "WhenItsTime — Know When to Connect" },
-      {
-        property: "og:description",
-        content: "Find the right time to reach out across time zones. Compare working hours, find the best time, and stay connected wherever you are.",
-      },
-    { property: "og:image",
-    content:
-      "https://raw.githubusercontent.com/lyutok/whenits-time-landing/refs/heads/main/src/assets/og-image-preview.png",
-  },
-
-  {
-    property: "og:image:width",
-    content: "1200",
-  },
-
-  {
-    property: "og:image:height",
-    content: "630",
-  },
-
-  {
-    property: "og:image:alt",
-    content:
-      "WhenItsTime — Know when to connect across time zones",
-  },
-
-  {
-    property: "og:url",
-    content: "https://whenitstime.pages.dev/",
-  },
-
-    {
-      property: "og:type",
-      content: "website",
-    },
-
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
     ],
   }),
   component: Index,
