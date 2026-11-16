@@ -221,9 +221,10 @@ function Index() {
           <a href="#features">Features</a>
           <a href="#pro">Pro</a>
           <a href="#faq">FAQ</a>
-          {/* link to web demo */}
-          {/* <Link className="nav-cta" to="/app">Try the app</Link> */}
-          <a className="nav-cta" href={APP_STORE_URL} target="_blank" rel="noreferrer">Try the app</a>
+          <Link className="nav-cta" to="/app">
+            <span>Try the app</span>
+            <small>free web preview</small>
+          </Link>
         </div>
 
         <button
@@ -247,8 +248,10 @@ function Index() {
             <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
               FAQ
             </a>
-            {/* <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try the app</Link> */}
-            <a href={APP_STORE_URL} target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)}>Try the app</a>
+            <Link className="nav-cta" to="/app" onClick={() => setMobileMenuOpen(false)}>
+              <span>Try the app</span>
+              <small>free web preview</small>
+            </Link>
           </div>
         )}
       </nav>
