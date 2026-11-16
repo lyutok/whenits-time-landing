@@ -27,6 +27,10 @@ export const Route = createFileRoute("/")({
         content: "index, follow, max-image-preview:large",
       },
       {
+        name: "msvalidate.01",
+        content: "99F18009A1D653EAC2EFE44D66D3D020",
+      },
+      {
         name: "apple-itunes-app",
         content: "app-id=6793032524",
       },
