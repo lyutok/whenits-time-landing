@@ -61,15 +61,23 @@ type OverlapRange = { start: number; end: number };
 
 export const Route = createFileRoute("/app")({
   head: () => ({
+    links: [{ rel: "canonical", href: "https://whenitstime.pages.dev/app" }],
     meta: [
-      { title: "Free Web Preview — WhenItsTime" },
+      { title: "Time Zone Overlap Calculator — Compare Working Hours | WhenItsTime" },
       {
         name: "description",
-        content: "Compare local times and working-hour overlap across time zones.",
+        content:
+          "Compare two time zones and see when your working hours overlap. Find the best time to call or meet across cities. Free online tool.",
       },
-      { property: "og:title", content: "Try WhenItsTime" },
-      { property: "og:description", content: "Find a better moment to connect across time zones." },
+      { name: "robots", content: "index, follow" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://whenitstime.pages.dev/app" },
+      { property: "og:title", content: "Time Zone Overlap Calculator — WhenItsTime" },
+      {
+        property: "og:description",
+        content: "Pick two places and see when your working hours overlap.",
+      },
+      { property: "og:image", content: "https://whenitstime.pages.dev/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -185,8 +193,7 @@ function TimeZoneComparison() {
                 : "Free web preview"}
             </p>
             <h1>
-              Compare working hours
-              <span>across time zones</span>
+              Compare working hours <span>across time zones</span>
             </h1>
             <h2>Try a free WhenItsTime tool to see when two cities’ working hours overlap.</h2>
           </div>
@@ -350,6 +357,34 @@ function TimeZoneComparison() {
             </p>
           </section>
         </div>
+
+        <details className="ios-seo-guide">
+          <summary>How to find the best time to call across time zones</summary>
+          <div className="ios-seo-guide-content">
+            <p>
+              To find the best time to call someone in another time zone, compare working hours, not
+              just clocks. Choose two places above, set your work hours, and the time zone overlap
+              shows when you are both at work.
+            </p>
+            <p>
+              Example: with 9:00–17:00 workdays, Berlin and New York overlap only from 15:00 to
+              17:00 in Berlin, which is 09:00 to 11:00 in New York. For Tokyo and London there is no
+              overlap at all, so one person has to take an early morning or a late evening call.
+            </p>
+            <p>
+              <strong>Tip:</strong> daylight saving time starts and ends on different dates in
+              different countries, so the gap between two cities can change by an hour a few times a
+              year. Always check the overlap for the exact day of your call.
+            </p>
+            <p>
+              Want to skip the math?{" "}
+              <a href={APP_STORE_URL} target="_blank" rel="noreferrer">
+                WhenItsTime for iPhone
+              </a>{" "}
+              finds the overlap for you and reminds you at the right moment.
+            </p>
+          </div>
+        </details>
 
         <section className="ios-download-cta" aria-labelledby="ios-download-title">
           <div>
