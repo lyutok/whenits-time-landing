@@ -2,6 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, Check, ChevronRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "../components/ui/dialog";
 import appIcon from "../assets/app-icon.png";
 import exploreScreen from "../assets/screen-explore.png";
 import overlapScreen from "../assets/screen-hero-overlap.png";
@@ -199,6 +206,7 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
 
 function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -212,49 +220,82 @@ function Index() {
 
   return (
     <main className="day-story">
-      <nav className="site-nav" aria-label="Main navigation">
-        <a className="brand" href="#top" aria-label="WhenItsTime home">
-          <img src={appIcon} alt="" />
-          <span>WhenItsTime</span>
-        </a>
-        <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#pro">Pro</a>
-          <a href="#faq">FAQ</a>
-          <Link className="nav-cta" to="/app">
-            <span>Try the app</span>
-            <small>free web preview</small>
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className="mobile-menu-toggle"
-          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen((open) => !open)}
-        >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
-
-        {mobileMenuOpen && (
-          <div className="mobile-menu" aria-label="Mobile navigation">
-            <a href="#features" onClick={() => setMobileMenuOpen(false)}>
-              Features
-            </a>
-            <a href="#pro" onClick={() => setMobileMenuOpen(false)}>
-              Pro
-            </a>
-            <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
-              FAQ
-            </a>
-            <Link className="nav-cta" to="/app" onClick={() => setMobileMenuOpen(false)}>
+      <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+        <nav className="site-nav" aria-label="Main navigation">
+          <a className="brand" href="#top" aria-label="WhenItsTime home">
+            <img src={appIcon} alt="" />
+            <span>WhenItsTime</span>
+          </a>
+          <div className="nav-links">
+            <a href="#features">Features</a>
+            <DialogTrigger asChild>
+              <button type="button" className="nav-video-trigger">
+                Video
+              </button>
+            </DialogTrigger>
+            <a href="#pro">Pro</a>
+            <a href="#faq">FAQ</a>
+            <Link className="nav-cta" to="/app">
               <span>Try the app</span>
               <small>free web preview</small>
             </Link>
           </div>
-        )}
-      </nav>
+          <button
+            type="button"
+            className="mobile-menu-toggle"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
+          {mobileMenuOpen && (
+            <div className="mobile-menu" aria-label="Mobile navigation">
+              <a href="#features" onClick={() => setMobileMenuOpen(false)}>
+                Features
+              </a>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  className="nav-video-trigger"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Video
+                </button>
+              </DialogTrigger>
+              <a href="#pro" onClick={() => setMobileMenuOpen(false)}>
+                Pro
+              </a>
+              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
+                FAQ
+              </a>
+              <Link className="nav-cta" to="/app" onClick={() => setMobileMenuOpen(false)}>
+                <span>Try the app</span>
+                <small>free web preview</small>
+              </Link>
+            </div>
+          )}
+        </nav>
+        <DialogContent
+          className="video-dialog-content"
+          overlayClassName="video-dialog-overlay"
+        >
+          <DialogTitle className="video-dialog-title">WhenItsTime video</DialogTitle>
+          <DialogDescription className="video-dialog-description">
+            Watch the WhenItsTime video on YouTube.
+          </DialogDescription>
+          <div className="video-dialog-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/YNQJhOgvKgQ?autoplay=1&cc_load_policy=0"
+              title="WhenItsTime YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <section className="hero" id="top">
         <div className="sun-disc" aria-hidden="true" />
