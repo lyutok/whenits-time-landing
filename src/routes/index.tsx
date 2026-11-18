@@ -204,6 +204,11 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
   );
 }
 
+function trackTryAppClick(buttonVariant: "desktop" | "mobile") {
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+  gtag?.("event", "try_app_click", { button_variant: buttonVariant });
+}
+
 function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
@@ -235,7 +240,7 @@ function Index() {
             </DialogTrigger>
             <a href="#pro">Pro</a>
             <a href="#faq">FAQ</a>
-            <Link className="nav-cta" to="/app">
+            <Link className="nav-cta" to="/app" onClick={() => trackTryAppClick("desktop")}>
               <span>Try the app</span>
               <small>free web preview</small>
             </Link>
@@ -270,7 +275,14 @@ function Index() {
               <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
                 FAQ
               </a>
-              <Link className="nav-cta" to="/app" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                className="nav-cta"
+                to="/app"
+                onClick={() => {
+                  trackTryAppClick("mobile");
+                  setMobileMenuOpen(false);
+                }}
+              >
                 <span>Try the app</span>
                 <small>free web preview</small>
               </Link>
