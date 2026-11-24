@@ -204,7 +204,7 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
   );
 }
 
-function trackTryAppClick(buttonVariant: "desktop" | "mobile") {
+function trackTryAppClick(buttonVariant: "desktop" | "mobile" | "footer") {
   const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
   gtag?.("event", "try_app_click", { button_variant: buttonVariant });
 }
@@ -510,6 +510,9 @@ function Index() {
                 <a href="#features">Features</a>
                 <a href="#pro">Pricing</a>
                 <a href="#faq">FAQ</a>
+                <Link to="/app" onClick={() => trackTryAppClick("footer")}>
+                  Compare time zones
+                </Link>
                 <Link to="/privacy">Privacy Policy</Link>
                 <a href="mailto:helloapps.studio%40outlook.com?subject=WhenItsTime%20inquiry" target="_blank">
                 {/* <a
