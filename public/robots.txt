@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://whenitstime.pages.dev/sitemap.xml
+Sitemap: https://whenitstimeapp.com/sitemap.xml

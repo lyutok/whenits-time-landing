@@ -61,7 +61,7 @@ type OverlapRange = { start: number; end: number };
 
 export const Route = createFileRoute("/app")({
   head: () => ({
-    links: [{ rel: "canonical", href: "https://whenitstime.pages.dev/app" }],
+    links: [{ rel: "canonical", href: "https://whenitstimeapp.com/app" }],
     meta: [
       { title: "Time Zone Overlap Calculator — Compare Working Hours | WhenItsTime" },
       {
@@ -71,13 +71,13 @@ export const Route = createFileRoute("/app")({
       },
       { name: "robots", content: "index, follow" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://whenitstime.pages.dev/app" },
+      { property: "og:url", content: "https://whenitstimeapp.com/app" },
       { property: "og:title", content: "Time Zone Overlap Calculator — WhenItsTime" },
       {
         property: "og:description",
         content: "Pick two places and see when your working hours overlap.",
       },
-      { property: "og:image", content: "https://whenitstime.pages.dev/og-image.png" },
+      { property: "og:image", content: "https://whenitstimeapp.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),

@@ -18,7 +18,7 @@ import workingHoursScreen from "../assets/screen-working-hours.png";
 import findTimeScreen from "../assets/screen-find-time.png";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/whenitstime/id6793032524";
-const OG_IMAGE_URL = "https://whenitstime.pages.dev/og-image.png";
+const OG_IMAGE_URL = "https://whenitstimeapp.com/og-image.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:url",
-        content: "https://whenitstime.pages.dev/",
+        content: "https://whenitstimeapp.com/",
       },
       {
         property: "og:title",
@@ -95,7 +95,7 @@ export const Route = createFileRoute("/")({
         content: OG_IMAGE_URL,
       },
     ],
-    links: [{ rel: "canonical", href: "https://whenitstime.pages.dev/" }],
+    links: [{ rel: "canonical", href: "https://whenitstimeapp.com/" }],
     scripts: [
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-T4R1CPRER4",
@@ -119,7 +119,7 @@ export const Route = createFileRoute("/")({
           operatingSystem: "iOS",
           description:
             "WhenItsTime helps you find the right time to connect across time zones: local times, working-hours overlap, best time to call and reminders.",
-          url: "https://whenitstime.pages.dev/",
+          url: "https://whenitstimeapp.com/",
           downloadUrl: "https://apps.apple.com/us/app/whenitstime/id6793032524",
           image: OG_IMAGE_URL,
           offers: {
